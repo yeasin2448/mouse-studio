@@ -29,6 +29,7 @@ module.exports = {
         theme_color: "#028FF0",
         primary_color: "#0DC1D9",
         tr_hover: "#defbff",
+        o: "#19181f",
       },
       dropShadow: {
         bmp: "0px 1px 17px rgba(0, 27, 45, 0.09)",
@@ -63,10 +64,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      barlow: "'Barlow Semi Condensed', sans-serif",
-      archivo: "'Archivo Narrow', sans-serif;",
-      boogaloo: "'Boogaloo', cursive;",
-      chau: "'Chau Philomene One', sans-serif",
+      poppins: "'Poppins', sans-serif",
     },
   },
   plugins: [],
