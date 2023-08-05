@@ -79,5 +79,14 @@
       </div>
     </header>
     <!-- header area ends  -->
+
+    <div x-data="{ open: false }">
+      <button @click="open = ! open">Toggle Content</button>
+
+      <div x-show="open">Content...</div>
+    </div>
+
+    <!-- optional js -->
+    <script src="../sass/js/script.js"></script>
   </body>
 </html>

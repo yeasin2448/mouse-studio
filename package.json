@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/css/style.css -o ./sass/css/custom.css --watch"
+    "build-css": "npx tailwindcss -i ./src/css/style.css -o ./sass/css/custom.css --watch",
+    "build-js": "npx esbuild ./src/js/script.js --outfile=./sass/js/script.js --bundle --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "alpinejs": "^3.12.3"
   }
 }
