@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../sass/css/custom.css" />
     <title>Mouse studio</title>
   </head>
-  <body>
+  <body x-data="{ openMenu: true }">
     <!-- header area start -->
     <header class="header_area bg-o py-4">
-      <div class="container mx-auto">
+      <div class="container-fluid mx-auto">
         <div class="flex items-center justify-between gap-5">
           <div class="brand_logo">
             <a
@@ -28,63 +28,86 @@
               >
             </a>
           </div>
-          <div class="main_menu">
-            <ul class="flex items-center gap-5">
+          <div
+            class="main_menu md:static md:w-auto md:h-auto fixed top-0 left-0 w-screen h-screen bg-o"
+            :class="! openMenu ? 'visible' : 'invisible'"
+          >
+            <ul
+              class="flex md:flex-row flex-col items-center md:gap-5 gap-10 md:h-auto h-screen max-md:justify-center text-white text-opacity-60 lg:text-lg md:text-base text-xl md:font-normal font-medium font-poppins"
+            >
               <li>
                 <a
                   href="#0"
-                  class="text-white text-opacity-60 lg:text-lg sm:text-base text-sm font-normal font-poppins px-2 hover:text-opacity-100 transition-all"
+                  class="px-2 hover:text-opacity-100 transition-all"
+                  aria-current="true"
                   >Home</a
                 >
               </li>
               <li>
-                <a
-                  href="#0"
-                  class="text-white text-opacity-60 lg:text-lg sm:text-base text-sm font-normal font-poppins px-2 hover:text-opacity-100 transition-all"
+                <a href="#0" class="px-2 hover:text-opacity-100 transition-all"
                   >Service</a
                 >
               </li>
               <li>
-                <a
-                  href="#0"
-                  class="text-white text-opacity-60 lg:text-lg sm:text-base text-sm font-normal font-poppins px-2 hover:text-opacity-100 transition-all"
+                <a href="#0" class="px-2 hover:text-opacity-100 transition-all"
                   >About</a
                 >
               </li>
               <li>
-                <a
-                  href="#0"
-                  class="text-white text-opacity-60 lg:text-lg sm:text-base text-sm font-normal font-poppins px-2 hover:text-opacity-100 transition-all"
+                <a href="#0" class="px-2 hover:text-opacity-100 transition-all"
                   >Work</a
                 >
               </li>
               <li>
-                <a
-                  href="#0"
-                  class="text-white text-opacity-60 lg:text-lg sm:text-base text-sm font-normal font-poppins px-2 hover:text-opacity-100 transition-all"
+                <a href="#0" class="px-2 hover:text-opacity-100 transition-all"
                   >Case study</a
                 >
               </li>
+              <li class="md:hidden">
+                <button
+                  type="button"
+                  class="bg-white rounded-3xl py-2 px-6 text-black md:text-lg font-medium font-poppins"
+                >
+                  Let's Talk
+                </button>
+              </li>
             </ul>
           </div>
-          <div class="lets_btn">
+          <div class="lets_btn hidden md:block">
             <button
               type="button"
-              class="bg-white rounded-3xl py-2 px-4 text-black md:text-lg font-medium font-poppins"
+              class="bg-white rounded-3xl py-2 px-6 text-black md:text-lg font-medium font-poppins"
             >
               Let's Talk
+            </button>
+          </div>
+          <div class="mobile_menu md:hidden">
+            <button
+              type="button"
+              class="bg-transparent flex flex-col gap-1"
+              @click="openMenu = ! openMenu"
+            >
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                viewBox="0 0 24 24"
+                class="h-5 w-6 text-white"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                ></path>
+              </svg>
             </button>
           </div>
         </div>
       </div>
     </header>
     <!-- header area ends  -->
-
-    <div x-data="{ open: false }">
-      <button @click="open = ! open">Toggle Content</button>
-
-      <div x-show="open">Content...</div>
-    </div>
 
     <!-- optional js -->
     <script src="../sass/js/script.js"></script>
