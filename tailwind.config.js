@@ -8,7 +8,6 @@ module.exports = {
         sm: "1rem",
         lg: "1.5rem",
         xl: "2rem",
-        "2xl": "3rem",
       },
     },
     screens: {
@@ -17,7 +16,7 @@ module.exports = {
       sm: "576px",
       md: "768px",
       lg: "992px",
-      xl: "1200px",
+      xl: "1280px",
       "2xl": "1500px",
       "max-lg": { max: "1023px" },
       "max-md": { max: "767px" },
@@ -27,9 +26,8 @@ module.exports = {
       colors: {
         header_bg: "#002138",
         theme_color: "#028FF0",
-        primary_color: "#0DC1D9",
-        tr_hover: "#defbff",
         o: "#19181f",
+        section_bg: "#23202a"
       },
       dropShadow: {
         bmp: "0px 1px 17px rgba(0, 27, 45, 0.09)",

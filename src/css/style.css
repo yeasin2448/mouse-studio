@@ -35,3 +35,15 @@ body {
     margin: 0 auto;
   }
 }
+
+.section_badge {
+  @apply bg-gradient-to-br from-[#333139] to-[#23202a] inline-block py-2 px-4 rounded-3xl rounded-bl-none text-white text-sm font-medium font-poppins;
+}
+
+.section_title {
+  @apply text-white xl:text-5xl lg:text-3xl md:text-2xl text-xl font-bold font-poppins;
+}
+
+.title_des {
+  @apply text-[#c2c6dd] sm:text-lg text-base font-normal font-poppins;
+}
